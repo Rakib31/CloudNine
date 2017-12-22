@@ -19,10 +19,23 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:0.5'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2'
+    implementation files('libs/commons-csv-1.5-sources.jar')
+    implementation files('libs/commons-csv-1.5.jar')
+    implementation files('libs/commons-lang-2.6.jar')
+    implementation files('libs/commons-logging-1.1.1.jar')
+    implementation files('libs/hsqldb.jar')
+    implementation files('libs/jackcess-2.1.6.jar')
+    implementation files('libs/ucanaccess-4.0.2.jar')
+    implementation files('libs/slf4j-api-1.6.1.jar')
+    implementation files('libs/c3p0-0.9.1-pre6.jar')
+    implementation files('libs/jboss-common-jdbc-wrapper-src.jar')
+    implementation files('libs/jboss-common-jdbc-wrapper.jar')
+    implementation files('libs/mysql-connector-java-5.1.45-bin.jar')
+    implementation files('libs/mysql-connector-java-5.1.45-bin.jar')
 }

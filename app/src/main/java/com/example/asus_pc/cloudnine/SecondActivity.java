@@ -1,35 +1,39 @@
 package com.example.asus_pc.cloudnine;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity implements View.OnClickListener {
+public class SecondActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText pass,email,url;
-    private Button but;
+    private Button b;
+    private EditText name,mail,phone,age,passward;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        email = (EditText) findViewById(R.id.email);
-        pass = (EditText) findViewById(R.id.pass);
-        url = (EditText) findViewById(R.id.URL);
-        but = (Button) findViewById(R.id.button);
-        but.setOnClickListener(this);
+        b = (Button) findViewById(R.id.buttonIsClicked);
+        name = (EditText) findViewById(R.id.nameBox);
+        mail = (EditText) findViewById(R.id.mailBox);
+        phone = (EditText) findViewById(R.id.phoneBox);
+        age = (EditText) findViewById(R.id.ageBox);
+        passward = (EditText) findViewById(R.id.passwardBox);
 
+        b.setOnClickListener(this);
     }
 
     @Override
-    public void onClick(View v) {
+    public void onClick (View v){
         if(!validity())
         {
+            Log.d("tag", "mess");
             //Toast.makeText(MainActivity.this,"Success...",Toast.LENGTH_LONG).show();
             Intent inten = new Intent(SecondActivity.this, ThirdActivity.class);
             startActivity(inten);
@@ -38,25 +42,34 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     private boolean validity()
     {
-        if(url.getText().toString().trim().length() <= 0)
+        if(name.getText().toString().trim().length() <= 0)
         {
-            Toast.makeText(SecondActivity.this,"Enter url",Toast.LENGTH_LONG).show();
+            Toast.makeText(SecondActivity.this,"Enter User Name",Toast.LENGTH_LONG).show();
             return true;
         }
-        else if(email.getText().toString().trim().length() <= 0)
+        else if(mail.getText().toString().trim().length() <= 0)
         {
-            Toast.makeText(SecondActivity.this,"Enter username",Toast.LENGTH_LONG).show();
+            Toast.makeText(SecondActivity.this,"Enter E-mail",Toast.LENGTH_LONG).show();
             return true;
         }
-
-        else if(pass.getText().toString().trim().length() <= 0)
+        else if(phone.getText().toString().trim().length() <= 0)
         {
-            Toast.makeText(SecondActivity.this,"Enter passward",Toast.LENGTH_LONG).show();
+            Toast.makeText(SecondActivity.this,"Enter Phone Number",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else if(age.getText().toString().trim().length() <= 0)
+        {
+            Toast.makeText(SecondActivity.this,"Enter Age",Toast.LENGTH_LONG).show();
+            return true;
+        }
+        else if(passward.getText().toString().trim().length() <= 0)
+        {
+            Toast.makeText(SecondActivity.this,"Enter Passward",Toast.LENGTH_LONG).show();
             return true;
         }
         else
             return false;
     }
 
-}
 
+}

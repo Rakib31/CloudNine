@@ -4,16 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
     tools:context="com.example.asus_pc.cloudnine.ThirdActivity">
 
-    <TextView
-        android:id="@+id/third"
+    <EditText
+        android:id="@+id/URL"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Company URL"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:inputType="textUri"
+        />
+
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:hint="User name"
+        android:focusableInTouchMode="false"
+
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Passward"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_marginLeft="120dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ok"
-        android:textSize="50sp"
-        android:textStyle="bold"/>
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Button"
+        android:textAlignment="center"/>
+
 
 
 </LinearLayout>

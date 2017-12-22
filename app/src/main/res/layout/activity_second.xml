@@ -5,33 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="10dp"
     tools:context="com.example.asus_pc.cloudnine.SecondActivity">
-
     <EditText
-        android:id="@+id/URL"
+        android:id="@+id/nameBox"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Company URL"
+        android:hint="User Name"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="textUri"
+        android:inputType="textPersonName"
         />
 
-
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/mailBox"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="E-mail"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:hint="User name"
-
         android:inputType="textEmailAddress"
         />
 
     <EditText
-        android:id="@+id/pass"
+        android:id="@+id/phoneBox"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:inputType="phone"
+        />
+
+    <EditText
+        android:id="@+id/ageBox"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:inputType="date"
+        />
+
+    <EditText
+        android:id="@+id/passwardBox"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,13 +59,17 @@
         />
 
     <Button
-        android:id="@+id/button"
-        android:layout_marginLeft="120dp"
+        android:id="@+id/buttonIsClicked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="Button"
-        android:textAlignment="center"/>
+        android:text="Log in"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/login"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+
+        />
+
 
 </LinearLayout>

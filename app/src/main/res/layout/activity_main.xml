@@ -5,71 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="10dp"
     tools:context="com.example.asus_pc.cloudnine.MainActivity">
 
-    <EditText
-        android:id="@+id/nameBox"
-        android:layout_margin="10dp"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="User Name"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="textPersonName"
-        />
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:padding="2dp"
+            android:text="Sign in" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up" />
+
+
+    </LinearLayout>
     <EditText
-        android:id="@+id/mailBox"
-        android:layout_margin="10dp"
+        android:id="@+id/edit"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="E-mail"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="textEmailAddress"
-        />
-
-    <EditText
-        android:id="@+id/phoneBox"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone Number"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="phone"
-        />
-
-    <EditText
-        android:id="@+id/ageBox"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Age"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="date"
-        />
-
-    <EditText
-        android:id="@+id/passwardBox"
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Passward"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:inputType="textPassword"
-        />
-
-    <Button
-        android:id="@+id/buttonIsClicked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Log in"
-        android:textAllCaps="false"
-        android:drawableLeft="@drawable/login"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:layout_margin="10dp"
-
+        android:layout_height="match_parent"
+        android:text="@string/welcome"
+        android:textAlignment="center"
+        android:textSize="70sp"
+        android:textStyle="italic"
+        android:gravity="center"
         />
 
 </LinearLayout>
