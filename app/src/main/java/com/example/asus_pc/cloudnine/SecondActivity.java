@@ -1,6 +1,7 @@
 package com.example.asus_pc.cloudnine;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -13,6 +14,7 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
 
     private Button b;
     private EditText name,mail,phone,age,passward;
+    LoginClass myDatabaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         age = (EditText) findViewById(R.id.ageBox);
         passward = (EditText) findViewById(R.id.passwardBox);
 
+        myDatabaseHelper = new LoginClass(this);
+        SQLiteDatabase sqLiteDatabase = myDatabaseHelper.getWritableDatabase();
+
         b.setOnClickListener(this);
     }
 
@@ -35,6 +40,20 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         {
             Log.d("tag", "mess");
             //Toast.makeText(MainActivity.this,"Success...",Toast.LENGTH_LONG).show();
+            String Name = name.getText().toString();
+            String Mail = mail.getText().toString();
+            String Age = age.getText().toString();
+            String Passward = passward.getText().toString();
+
+             myDatabaseHelper.insertData(Name,Mail,Passward,Age);
+
+            /*if((rowId == -1)){
+                Toast.makeText(getApplicationContext(), "Row "+rowId+" is unsuccessfully inserted", Toast.LENGTH_LONG).show();
+            }
+
+            else{
+                Toast.makeText(getApplicationContext(), "Row "+rowId+" is successfully inserted", Toast.LENGTH_LONG).show();
+            }*/
             Intent inten = new Intent(SecondActivity.this, ThirdActivity.class);
             startActivity(inten);
         }

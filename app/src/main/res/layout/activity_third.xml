@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorPrimaryDark"
-        android:hint="User name"
+        android:hint="User name or Email"
         android:focusableInTouchMode="false"
 
         android:inputType="textEmailAddress"
@@ -51,6 +51,9 @@
         android:text="Button"
         android:textAlignment="center"/>
 
-
+    <WebView
+        android:id="@+id/webId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
