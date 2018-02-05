@@ -50,7 +50,7 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
                     webSettings.setJavaScriptEnabled(true);
                     webView.setWebViewClient(new WebViewClient());
                     webView.loadUrl("http:/"+url.getText().toString().trim()+"/");
-                    //Intent inten = new Intent(ThirdActivity.this, FourthActivity.class);
+                    ///Intent inten = new Intent(ThirdActivity.this, FourthActivity.class);
                     //startActivity(inten);
                 } else
                     Toast.makeText(ThirdActivity.this, "incorrect username or passward", Toast.LENGTH_LONG).show();
