@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CloudNine.iml" filepath="$PROJECT_DIR$/CloudNine.iml" />
+      <module fileurl="file://G:\STUDY\Programming Code &amp; tutorial\CloudNine\CloudNine.iml" filepath="G:\STUDY\Programming Code &amp; tutorial\CloudNine\CloudNine.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://G:\STUDY\Programming Code &amp; tutorial\CloudNine\app\app.iml" filepath="G:\STUDY\Programming Code &amp; tutorial\CloudNine\app\app.iml" />
     </modules>
   </component>
 </project>
