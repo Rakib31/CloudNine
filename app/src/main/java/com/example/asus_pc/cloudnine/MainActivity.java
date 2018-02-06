@@ -10,7 +10,6 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private Button button1,button2;
-    private EditText edit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
-        edit = (EditText) findViewById(R.id.edit);
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
     }

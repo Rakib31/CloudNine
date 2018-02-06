@@ -20,9 +20,10 @@ import java.lang.*;
 
 public class ThirdActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private WebView webView;
     private EditText pass,email,url;
     private Button button,button2;
+    public  String string = new String();
+
     LoginClass loginHelper = new LoginClass(this);
 
     @Override
@@ -35,7 +36,6 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         url = (EditText) findViewById(R.id.URL);
         button = (Button) findViewById(R.id.button);
         button2 = (Button) findViewById(R.id.button2);
-        webView = (WebView) findViewById(R.id.webId);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
 
@@ -45,13 +45,12 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if(v.getId() == R.id.button) {
             if (!validity()) {
+                Log.d("tag",string);
                 if (loginHelper.search(email.getText().toString(), pass.getText().toString())) {
-                    WebSettings webSettings = webView.getSettings();
-                    webSettings.setJavaScriptEnabled(true);
-                    webView.setWebViewClient(new WebViewClient());
-                    webView.loadUrl("http:/"+url.getText().toString().trim()+"/");
-                    ///Intent inten = new Intent(ThirdActivity.this, FourthActivity.class);
-                    //startActivity(inten);
+                    String string = url.getText().toString().trim();
+                    Intent inten = new Intent(ThirdActivity.this, FourthActivity.class);
+                    inten.putExtra("NAME",string);
+                    startActivity(inten);
                 } else
                     Toast.makeText(ThirdActivity.this, "incorrect username or passward", Toast.LENGTH_LONG).show();
             }
@@ -86,7 +85,6 @@ public class ThirdActivity extends AppCompatActivity implements View.OnClickList
         else
             return false;
     }
-
 }
 
 
